@@ -156,14 +156,6 @@ public abstract class SwerveModule implements AutoCloseable {
    */
   private void disabledInit() {
     enableBrakeMode(true);
-
-    try {
-      FileWriter fileWriter = new FileWriter(m_odometerOutputPath);
-      fileWriter.write(String.valueOf(m_runningOdometer));
-      fileWriter.close();
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
   }
 
   /**
